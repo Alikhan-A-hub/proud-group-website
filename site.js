@@ -147,8 +147,6 @@
     var close=function(){if(closed)return;closed=true;intro.classList.add('out');document.documentElement.classList.remove('intro-on');
       try{sessionStorage.setItem('proudIntroSeen','1')}catch(e){}
       setTimeout(function(){intro.remove()},800);};
-    intro.addEventListener('click',close);
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'||e.key==='Enter'||e.key===' ')close()},{once:true});
     var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
     setTimeout(close, reduce?1200:3600);
   }

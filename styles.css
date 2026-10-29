@@ -749,7 +749,7 @@ footer h4{color:#fff;font-size:1.75rem;display:inline-block;padding-bottom:10px;
 @media (max-width:1100px){.contact .grid.noform > div{grid-template-columns:1fr}.contact .grid.noform .ccard + .ccard{margin-top:30px}}
 
 /* ===== Opening intro (homepage) ===== */
-.intro{position:fixed;inset:0;z-index:200;background:radial-gradient(1100px 700px at 50% 45%,#16205e 0%,#0c1240 45%,#060a24 100%);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;transition:opacity .7s ease, visibility .7s;padding:env(safe-area-inset-top,0px) max(16px,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(16px,env(safe-area-inset-left,0px))}
+.intro{position:fixed;inset:0;z-index:200;cursor:default;background:radial-gradient(1100px 700px at 50% 45%,#16205e 0%,#0c1240 45%,#060a24 100%);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;transition:opacity .7s ease, visibility .7s;padding:env(safe-area-inset-top,0px) max(16px,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(16px,env(safe-area-inset-left,0px))}
 .intro.out{opacity:0;visibility:hidden}
 html.intro-on,html.intro-on body{overflow:hidden}
 .intro .glow{position:absolute;width:min(900px,90vw);aspect-ratio:2/1;border-radius:50%;background:radial-gradient(closest-side,rgba(43,59,181,.35),transparent);filter:blur(10px);animation:introGlow 3.4s ease-in-out infinite alternate}
@@ -780,3 +780,23 @@ html.intro-on,html.intro-on body{overflow:hidden}
 @media (prefers-reduced-motion: reduce){.intro .core{animation-duration:.01s;animation-delay:0s}.intro .bar{animation-delay:0s;animation-duration:.01s}.intro .dot,.intro .glow{animation:none}}
 
 .nav-cta{white-space:nowrap}
+
+/* v2 homepage helpers (existing design system) */
+.phil-more{display:flex;justify-content:center;margin-top:60px}
+.phil-more .btn{font-size:clamp(.95rem,1.1vw,1.15rem);padding:.95em 1.6em;border-radius:12px}
+.adm .feeline{text-align:center;color:#c7cbe6;font-size:clamp(1rem,1.2vw,1.2rem);margin-top:34px;line-height:1.7}
+.adm .feeline a{color:var(--green-bright);font-weight:700;text-decoration:underline;text-underline-offset:4px;padding:6px 2px}
+.ccard .hrs-row{display:flex;align-items:center;gap:12px;color:var(--text);font-size:1.15rem;margin-top:-6px}
+.ccard.s .hrs-row svg{color:var(--green)} .ccard.a .hrs-row svg{color:var(--red)}
+.acard .acts .btn{min-height:52px}
+.req-note{font-size:1rem;color:var(--muted);margin-top:-10px}
+footer .fcta{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;border-bottom:1px solid #1d2450;padding-block:56px 50px}
+footer .fcta b{display:block;font-family:var(--f-display);color:#fff;font-size:clamp(1.5rem,2.2vw,2.2rem)}
+footer .fcta span{color:#c7cbe6;font-size:clamp(1rem,1.2vw,1.2rem)}
+footer .fcta-btns{display:flex;gap:16px;flex-wrap:wrap}
+footer .fcta-btns .btn{font-size:clamp(.95rem,1.05vw,1.1rem);padding:.95em 1.5em;min-height:52px}
+footer .grid{padding-block:70px 60px}
+/* Comfortable tap areas on phones (visuals unchanged) */
+.dots button{position:relative}
+.dots button::after{content:"";position:absolute;inset:-16px -5px}
+@media (max-width:640px){.float button{width:44px;height:44px}}
