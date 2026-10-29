@@ -102,7 +102,7 @@
   // Hero slider (home)
   var slides=[].slice.call(document.querySelectorAll('#slides .slide'));
   if(slides.length){
-    var dots=document.getElementById('dots'),counter=document.getElementById('counter'),cur=0,timer;
+    var dots=document.getElementById('dots')||document.createElement('div'),counter=document.getElementById('counter')||document.createElement('span'),cur=0,timer;
     slides.forEach(function(_,i){var b=document.createElement('button');b.setAttribute('aria-label','Go to slide '+(i+1));b.onclick=function(){go(i,true)};dots.appendChild(b)});
     var go=function(i,user){cur=(i+slides.length)%slides.length;
       slides.forEach(function(s,k){s.classList.toggle('on',k===cur)});
@@ -110,8 +110,7 @@
       counter.textContent=String(cur+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
       if(user)start();};
     var start=function(){clearInterval(timer);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(function(){go(cur+1)},6500)};
-    document.getElementById('prev').onclick=function(){go(cur-1,true)};
-    document.getElementById('next').onclick=function(){go(cur+1,true)};
+    var pv=document.getElementById('prev'),nx=document.getElementById('next'); if(pv)pv.onclick=function(){go(cur-1,true)}; if(nx)nx.onclick=function(){go(cur+1,true)};
     go(0);start();
   }
 
@@ -150,5 +149,5 @@
     var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
     setTimeout(close, reduce?1200:3600);
   }
-  document.getElementById('totop').onclick=function(){scrollTo({top:0,behavior:'smooth'})};
+  var tt=document.getElementById('totop'); if(tt) tt.onclick=function(){scrollTo({top:0,behavior:'smooth'})};
 })();
