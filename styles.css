@@ -494,8 +494,8 @@ footer h4{color:#fff;font-size:1.75rem;display:inline-block;padding-bottom:10px;
 
 .diff{display:grid;grid-template-columns:1.4fr 1fr;gap:80px;align-items:center}
 .diff h2{font-size:clamp(2rem,3.4vw,3.6rem);margin-top:10px}
-.diff .intro{font-size:clamp(1rem,1.3vw,1.35rem);margin-top:46px}
-.diff .intro b{color:#334155}
+.diff .diff-intro{font-size:clamp(1rem,1.3vw,1.35rem);margin-top:46px}
+.diff .diff-intro b{color:#334155}
 .dl{list-style:none;padding:0;margin:36px 0 0;display:flex;flex-direction:column;gap:26px}
 .dl li{display:flex;gap:18px;font-size:clamp(1rem,1.3vw,1.35rem);line-height:1.6}
 .dl li svg{color:var(--green);font-size:1.8rem;margin-top:2px}
