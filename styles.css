@@ -854,3 +854,10 @@ footer .grid{padding-block:70px 60px}
   .hero .pill{font-size:clamp(.8rem,min(1vw,1.9vh),1.2rem);padding:8px 20px}
   .hero .ctas .btn{font-size:clamp(.92rem,min(1.05vw,2vh),1.3rem)}
 }
+
+/* Footer: brand + quick links only */
+footer .grid{grid-template-columns:1.3fr 1fr;gap:80px}
+footer .qlinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 40px}
+@media (max-width:760px){footer .grid{grid-template-columns:1fr;gap:40px}}
+
+.fbot .pol{margin-right:0!important}
