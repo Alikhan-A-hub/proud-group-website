@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://proud-school-academy.vercel.app/sitemap.xml
