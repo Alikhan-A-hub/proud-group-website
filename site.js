@@ -68,7 +68,7 @@
   // Skills (home)
   var sk=document.getElementById('skills');
   if(sk&&D.skills){sk.innerHTML=D.skills.map(function(s){
-    return '<article class="sk"><div class="top"><span class="chip">'+s[0]+'</span><span class="fa">Focus Area '+s[1]+'</span></div><h3>'+esc(s[2])+'</h3><p>'+esc(s[3])+'</p><div class="mrow"><span>Target Mastery</span><b>'+s[4]+'%</b></div><div class="track" role="meter" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+s[4]+'" aria-label="Target mastery"><div class="fill" style="width:'+s[4]+'%"></div></div></article>';
+    return '<article class="sk"><div class="top"><span class="chip">'+s[0]+'</span></div><h3>'+esc(s[2])+'</h3><p>'+esc(s[3])+'</p></article>';
   }).join('');}
 
   // FAQ
