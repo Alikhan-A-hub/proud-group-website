@@ -902,3 +902,6 @@ footer .qlinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16
 .pa-name,.pa-arabic{min-width:0}
 @media (max-width:760px){.pa-name h2{white-space:normal;font-size:clamp(1.6rem,8vw,2.4rem)}.pa-portrait{width:58px}.pa-head{gap:8px}.pa-arabic{font-size:clamp(1rem,5.2vw,1.6rem)}}
 @media (max-width:760px){.pa-arabic{white-space:normal;line-height:1.6}}
+.pa-arabic{display:flex;justify-content:center;align-items:center}
+.pa-arabic img{width:100%;max-width:520px;height:auto;display:block}
+@media (max-width:760px){.pa-arabic img{max-width:220px}}
