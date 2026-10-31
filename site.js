@@ -95,7 +95,7 @@
   var gt=document.getElementById('gtabs');
   if(gt){gt.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var f=b.dataset.f;
     gt.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
-    document.querySelectorAll('#gallery-grid .gcard').forEach(function(c){c.hidden=!(f==='all'||c.dataset.cat===f)});});}
+    document.querySelectorAll('#gallery-grid .gcard, #gallery-grid .gcard-like').forEach(function(c){c.hidden=!(f==='all'||c.dataset.cat===f)});});}
 
   icons();
 
