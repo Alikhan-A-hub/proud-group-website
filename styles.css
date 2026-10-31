@@ -868,3 +868,7 @@ footer .qlinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16
 .founder .who{padding:22px 24px}.founder .who b{font-size:1.4rem}.founder .who span{font-size:.95rem}
 @media (max-width:1300px){.founder{grid-template-columns:320px 1fr;gap:50px}}
 @media (max-width:900px){.founder{grid-template-columns:1fr;gap:40px}.founder .side{position:static;max-width:280px;margin:0 auto;width:100%}}
+.founder{grid-template-columns:clamp(220px,calc((100svh - 330px)*.8),300px) 1fr;gap:64px}
+.founder .who{padding:16px 20px;border-radius:16px;border-bottom-width:4px}.founder .who b{font-size:1.15rem}.founder .who span{font-size:.85rem}
+.founder .side{gap:18px}
+@media (max-width:900px){.founder{grid-template-columns:1fr;gap:40px}.founder .side{max-width:240px}}
